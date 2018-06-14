@@ -36,8 +36,19 @@ class LoginController extends Controller
     {
         $this->middleware('guest')->except('logout');
     }
+
     /**
-     * rewrite username function
+     * show login form
+     *
+     * @return \Illuminate\Contracts\View\Factory|\Illuminate\View\View
+     */
+    public function showLoginForm()
+    {
+        return view('admins.login');
+    }
+
+    /**
+     * Get the login username to be used by the controller.
      *
      * @return string
      */
@@ -45,17 +56,4 @@ class LoginController extends Controller
     {
         return 'username';
     }
-    /**
-     * rewrite showLoginForm function
-     *
-     * @return \Illuminate\Http\Response
-     */
-    public function showLoginForm()
-    {
-        return view('login.login');
-    }
-    /**
-     * login
-     */
-
 }

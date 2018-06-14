@@ -17,6 +17,7 @@ Route::get('/', function () {
 
 Auth::routes();
 
-Route::get('/home', 'HomeController@index')->name('home');
-Route::get('/show','Auth\LoginController@showLoginForm')->name('show');
-Route::get('/login','Auth\LoginController@login')->name('login');
+Route::group(['middleware'=>['web','auth:web']],function(){
+    Route::get('/show','Admins\generalInfoController@index')->name('show');
+    Route::get('/test','Admins\generalInfoController@dbTest');
+});

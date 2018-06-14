@@ -13,11 +13,10 @@ class CreateSecurityQuestionsTable extends Migration
      */
     public function up()
     {
-        Schema::create('security_questions', function (Blueprint $table) {
+        //
+        Schema::create('security_questions',function(Blueprint $table){
             $table->increments('id');
-            $table->string('questions_zh',255);
-            $table->string('questions_en',255);
-            $table->timestamps();
+            $table->string('questions')->unique();
         });
     }
 
@@ -28,6 +27,7 @@ class CreateSecurityQuestionsTable extends Migration
      */
     public function down()
     {
+        //
         Schema::dropIfExists('security_questions');
     }
 }

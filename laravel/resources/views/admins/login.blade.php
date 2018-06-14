@@ -25,21 +25,21 @@
 
 <body class="user-select">
 <div class="container">
-  <div class="siteIcon"><img src="admins/imagesicon/icon.png" alt="" data-toggle="tooltip" data-placement="top" title="欢迎使用异清轩博客管理系统" draggable="false" /></div>
-  <form action="index.html" method="post" autocomplete="off" class="form-signin">
+  <div class="siteIcon"><img src="admins/images/icon/icon.png" alt="" data-toggle="tooltip" data-placement="top" title="欢迎使用异清轩博客管理系统" draggable="false" /></div>
+  <form action="{{ route('login') }}" method="post" autocomplete="off" class="form-signin">
       {{ csrf_field() }}
     <h2 class="form-signin-heading">管理员登录</h2>
     <label for="userName" class="sr-only">用户名</label>
     <input type="text" id="userName" name="username" class="form-control" placeholder="请输入用户名" required autofocus autocomplete="off" maxlength="10">
     <label for="userPwd" class="sr-only">密码</label>
-    <input type="password" id="userPwd" name="userpwd" class="form-control" placeholder="请输入密码" required autocomplete="off" maxlength="18">
-    <a href="main.html"><button class="btn btn-md btn-primary" type="submit" id="signinSubmit">登录</button></a><a href="main.html"><button class="btn btn-md btn-primary " type="button" id="register">注册</button></a>
+    <input type="password" id="userPwd" name="password" class="form-control" placeholder="请输入密码" required autocomplete="off" maxlength="18">
+    <button class="btn btn-md btn-primary btn-block" type="submit" id="signinSubmit">登录</button>
   </form>
   <div class="footer">
-    <p><a href="index.html" data-toggle="tooltip" data-placement="left" title="不知道自己在哪?">回到后台 →</a></p>
+    <p><a href="{{ route('register') }}" data-toggle="tooltip" data-placement="left" title="没有账号?">注册账号 →</a></p>
   </div>
 </div>
-<script src="admins/js/bootstrap.min.js"></script> 
+<script src="admins/js/bootstrap.min.js"></script>
 <script>
 $('[data-toggle="tooltip"]').tooltip();
 window.oncontextmenu = function(){
