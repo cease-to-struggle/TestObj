@@ -9,6 +9,13 @@ class User extends Authenticatable
 {
     use Notifiable;
 
+     /**
+     * The table associated with the model.
+     *
+     * @var string
+     */
+    protected $table = 'users';
+
     /**
      * The attributes that are mass assignable.
      *
@@ -26,4 +33,9 @@ class User extends Authenticatable
     protected $hidden = [
         'password', 'remember_token',
     ];
+
+    public function info()
+    {
+        $this -> hasOne(UserInfo::class,'foreign_key','user_id');
+    }
 }

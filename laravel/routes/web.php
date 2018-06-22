@@ -17,7 +17,11 @@ Route::get('/', function () {
 
 Auth::routes();
 
-Route::group(['middleware'=>['web','auth:web']],function(){
-    Route::get('/show','Admins\generalInfoController@index')->name('show');
-    Route::get('/test','Admins\generalInfoController@dbTest');
+Route::group(['middleware'=>'web'],function(){
+
+    Route::get('/register',['as'=>'register','uses'=>'Admins\RegisterController@showRegisterForm']);
+    Route::group(['middleware'=>'auth:web'],function(){
+        Route::get('/show','Admins\GeneralInfoController@index')->name('show');
+        Route::get('/test','Admins\GeneralInfoController@dbTest');
+    });
 });

@@ -7,7 +7,7 @@ use App\Http\Controllers\Controller;
 use DB;
 use stdClass;
 
-class generalInfoController extends Controller
+class GeneralInfoController extends Controller
 {
 	//public $
 
