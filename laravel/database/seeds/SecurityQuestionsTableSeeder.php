@@ -4,42 +4,51 @@ use Illuminate\Database\Seeder;
 
 class SecurityQuestionsTableSeeder extends Seeder
 {
+
     /**
-     * Run the database seeds.
+     * Auto generated seed file
      *
      * @return void
      */
     public function run()
     {
-        //
+        
+
         \DB::table('security_questions')->delete();
-
-        \DB::table('security_questions')->insert(array(
-           '0'=>array(
-               'id'=>1,
-               'questions'=>'你最爱吃的水果是什么？',
-           ),
-            '1'=>array(
-                'id'=>2,
-                'questions'=>'你最爱吃的人是谁？',
+        
+        \DB::table('security_questions')->insert(array (
+            0 => 
+            array (
+                'id' => 4,
+                'question' => '你伴侣的生日是哪一天？',
             ),
-            '2'=>array(
-                'id'=>3,
-                'questions'=>'你最爱吃的运动是什么？',
+            1 => 
+            array (
+                'id' => 6,
+                'question' => '你初中的班主任是谁？',
             ),
-            '3'=>array(
-                'id'=>4,
-                'questions'=>'你另一半的生日是哪天？',
+            2 => 
+            array (
+                'id' => 1,
+                'question' => '你最爱吃的水果是什么？',
             ),
-            '4'=>array(
-                'id'=>5,
-                'questions'=>'你高中班主任是？',
+            3 => 
+            array (
+                'id' => 2,
+                'question' => '你最爱的人是谁？',
             ),
-            '5'=>array(
-                'id'=>6,
-                'questions'=>'你初中班主任是？',
+            4 => 
+            array (
+                'id' => 3,
+                'question' => '你最爱的运动是什么？',
             ),
-
+            5 => 
+            array (
+                'id' => 5,
+                'question' => '你高中的班主任是谁？',
+            ),
         ));
+        
+        
     }
 }

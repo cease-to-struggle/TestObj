@@ -36,6 +36,11 @@ class User extends Authenticatable
 
     public function info()
     {
-        $this -> hasOne(UserInfo::class,'foreign_key','user_id');
+        return $this -> hasOne(UserInfo::class,'user_id');
+    }
+
+    public function answer()
+    {
+        return $this->hasMany(Answer::class);
     }
 }

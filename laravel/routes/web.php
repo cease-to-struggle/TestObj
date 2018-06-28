@@ -20,6 +20,7 @@ Auth::routes();
 Route::group(['middleware'=>'web'],function(){
 
     Route::get('/register',['as'=>'register','uses'=>'Admins\RegisterController@showRegisterForm']);
+    Route::post('/register/validateName','Admins\RegisterController@validateName');
     Route::group(['middleware'=>'auth:web'],function(){
         Route::get('/show','Admins\GeneralInfoController@index')->name('show');
         Route::get('/test','Admins\GeneralInfoController@dbTest');

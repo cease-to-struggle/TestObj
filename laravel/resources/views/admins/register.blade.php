@@ -9,7 +9,8 @@
   </head>
 <body>
 <div id="main_layer" align="center">
- <form method="post" action="register.asp" id="form1">
+ <form method="post" action="{{route('register')}}" id="form1">
+     <input id="token" type="hidden" name="_token" value="{{ csrf_token() }}">
      <!-- 头部图片开始--> 
    <div id="register_view_layer_17" ><img src="admins/images/logo_rg.gif" /></div>
      <!-- 头部图片结束-->
@@ -33,8 +34,8 @@
        <!-- 密码 结束-->
        <!-- 确认 开始-->
        <div id="register_view_layer_3" class="register_view_layer_1">
-            <div id="register_view_layer_3_1"  class="register_view_layer_1_left"> 确认:<input type="password" name="user_loginPassword_1" onBlur="verificationMimaQueren()"  /></div>
-        <div id="register_view_layer_3_2" class="verification" align="left">*</div>
+            <div id="register_view_layer_3_1"  class="register_view_layer_1_left"> 确认:<input type="password" id="user_loginPassword_1" name="user_loginPassword_1" onBlur="verificationMimaQueren()"  /></div>
+        <div id="register_view_layer_3_2" class="verification" align="left"></div>
        </div>
        <!-- 确认 结束-->
        <!-- "个人信息设置" 开始-->
@@ -71,44 +72,36 @@
        <!--Tel 结束 -->
        <!--住址  开始-->
        <div id="register_view_layer_7" class="register_view_layer_1">
-           <div id="register_view_layer_7_1" class="register_view_layer_1_left">住址:<input type="text" name="user_address" /></div>
+           <div id="register_view_layer_7_1" class="register_view_layer_1_left">住址:<input class="spe" type="text" name="user_address" placeholder="填写格式：省份-城市-区域" /></div>
          <div id="register_view_layer_7_2" class="verification" align="left"></div>
        </div>
        <!--住址 结束 -->
-      
-       <!-- 传真 开始-->
-       <div id="register_view_layer_9" class="register_view_layer_1">
-            <div id="register_view_layer_9_1" class="register_view_layer_1_left">传真:<input type="text" name="user_fax" /></div>
-        <div id="register_view_layer_9_2" class="verification" align="left"></div>
-         </div>
-      
-       <!--传真 结束 -->
 
-         <!-- 身份证号 开始-->
-       <div id="register_view_layer_11">
-              <div id="register_view_layer_11_1" class="register_view_layer_1_left"> 身份证号:<input type="text" name="user_identificationCard" /></div>
-          <div id="register_view_layer_11_2" class="verification" align="left"></div>
-         </div>
-       <!--身份证号 结束 -->
        <!-- 邮箱 开始-->
        <div id="register_view_layer_12" class="register_view_layer_1">
             <div id="register_view_layer_12_1" class="register_view_layer_1_left">  邮箱:<input type="text" name="user_eMail" id="userEmail"  onblur="verificationYouxiang()" /></div>
-          <div id="register_view_layer_12_2" class="verification" align="left"></div>
+          <div id="register_view_layer_12_2" class="verification" align="left">*</div>
          </div>
        <!--邮箱 结束 -->
-         <!--单位名称 开始 -->
-       <div id="register_view_layer_13">
-              <div id="register_view_layer_13_1" class="register_view_layer_1_left">单位名称:<input type="text" name="user_organizationName" /></div>
-          <div id="register_view_layer_13_2" class="verification" align="left"></div>
-         </div>
-       <!--单位名称 结束 -->
-       <!--QQ开始 -->
-       <div id="register_view_layer_14" class="register_view_layer_1">
-            <div id="register_view_layer_14_1" class="register_view_layer_1_left">&nbsp;&nbsp;QQ:<input type="text" name="user_QQ"   onBlur="verificationNianling()"/></div>
-        <div id="register_view_layer_14_2" class="verification" align="left">*</div>
-          <div id="register_view_layer_14_2" class="verification" align="left"></div>
+       <!--密保问题开始 -->
+       <div id="register_view_layer_13" class="register_view_layer_1">
+           <div id="register_view_layer_13_1" class="register_view_layer_1_left">密保问题:<select  name="question1"   onBlur="verificationQuestion()"><option value="" selected>--请选择问题--</option>
+                   @foreach($questions as $question)
+                       <option value="{{$question->id}}" >{{$question->question}}</option>
+                   @endforeach
+               </select></div>
+           <div id="register_view_layer_13_3" class="register_view_layer_1_left">答&nbsp;&nbsp;&nbsp;&nbsp;案:<input type="text" name="answer1"   onBlur="verificationAnswer()"/></div>
+           <div id="register_view_layer_13_2" class="verification" align="left"></div>
        </div>
-       <!--QQ结束 -->
+       <div id="register_view_layer_13" class="register_view_layer_1">
+           <div id="register_view_layer_11_1" class="register_view_layer_1_left">密保问题:<select  name="question2"   onBlur="verificationQuestion()"><option value="" selected>--请选择问题--</option>    @foreach($questions as $question)
+                       <option value="{{$question->id}}" >{{$question->question}}</option>
+                   @endforeach</select></div>
+           <div id="register_view_layer_11_3" class="register_view_layer_1_left">答&nbsp;&nbsp;&nbsp;&nbsp;案:<input type="text" name="answer2"   onBlur="verificationAnswer()"/></div>
+           <div id="register_view_layer_11_2" class="verification" align="left"></div>
+       </div>
+       <!--密保问题结束 -->
+
        <!--"注册验证" 开始 -->
        <div id="register_view_layer_19"><img src="admins/images/validate.jpg" /></div>
        <!--"注册验证" 结束 -->

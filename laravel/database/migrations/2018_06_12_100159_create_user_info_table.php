@@ -17,16 +17,13 @@ class CreateUserInfoTable extends Migration
             $table->increments('id');
             $table->integer('user_id')->unsigned();
             $table->foreign('user_id')->references('id')->on('users')->onDelete('cascade')->onUpdate('cascade');
-            $table->string('realname')->nullable();
-            $table->enum('sex',['0','1'])->default('0');
-            $table->string('age')->nullable();
-            $table->string('birthday')->nullable();
-            $table->integer('question_id')->nullable()->unsigned();
-            $table->foreign('question_id')->references('id')->on('security_questions')->onDelete('cascade')->onUpdate('cascade');
-            $table->string('answer')->nullable();
-            $table->string('address_province')->nullable();
-            $table->string('address_city')->nullable();
-            $table->string('address_region')->nullable();
+            $table->string('realname')->default('');
+            $table->enum('sex',['0','1'])->default('0')->commit('0 代表女;1 代表男');
+            $table->string('age')->default('');
+            $table->string('birthday')->default('');
+            $table->string('address_province')->default('');
+            $table->string('address_city')->default('');
+            $table->string('address_region')->default('');
             $table->timestamps();
 
         });

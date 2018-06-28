@@ -8,8 +8,11 @@ echo '<pre/>';
 print_r($arr);
 sort($arr);
 print_r($arr);*/
-$str = '123';
+/*$str = '123';
 $arr = explode(',', $str);
-var_dump(in_array($str, $arr));
+var_dump(in_array($str, $arr));*/
+$arr=[];
+$a=null;
+var_dump(in_array($a,$arr));
 
 		

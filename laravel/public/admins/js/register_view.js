@@ -29,8 +29,8 @@ function verificationMima(){
 
 function verificationMimaQueren(){
 	var txt=document.getElementById("user_loginPassword_1").value;
-	var txt1=document.getElementById("userLoginPassword").value;
-	if(txt=="" || txt==null || txt != txt1){
+	var tx=document.getElementById("userLoginPassword").value;
+	if(txt=="" || txt==null || txt !== tx){
 		document.getElementById("register_view_layer_3_2").innerHTML="密码不一致!";
 		}
 		else{
@@ -39,22 +39,6 @@ function verificationMimaQueren(){
 	     }
 	
 }
-function verificationNianling(){
-  
-	 var txt=document.getElementById("user_QQ").value;
-	 if(txt=="" || txt==null){
-		 document.getElementById("register_view_layer_14_2").innerHTML="QQ不能为空！"; 
-	 }
-	 else if(!isNaN(txt)){
-		  
-		 document.getElementById("register_view_layer_14_2").innerHTML="";   
-		 return true;
-		 }
-		 else{
-		 document.getElementById("register_view_layer_14_2").innerHTML="QQ必须为数字!";   
-			 return false;
-			 }
-	}
  	function  verificationN(){
 		 var txt=document.getElementById("user_age").value;
 	 if(txt=="" || txt==null){
@@ -86,6 +70,11 @@ function verificationTel(){
 		 document.getElementById("register_view_layer_6_2").innerHTML="联系方式必须为数字!";   
 			 return false;
 			 }
+}
+
+function verificationAddress()
+{
+
 }
 function verificationYouxiang(){
 	

@@ -45,18 +45,22 @@ var ajax = function(option)
 //        request.send(option.param); 
 
 		request.onreadystatechange = ResponseRequest;
-	
-        request.open("post","verificationYonghuming.asp?userName="+option, true);
-		
-        request.send(null); 
+
+        request.open("post",'/register/validateName', true);
+
+        request.setRequestHeader("X-CSRF-TOKEN", document.getElementById('token').value);
+        request.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
+
+        request.send("userName="+option);
 		
     }
 
     var ResponseRequest = function()
     {
+        console.log(request);
 
         if (request.readyState == 4)
-        {  
+        {
 		
             if (request.status == 200)
             { 

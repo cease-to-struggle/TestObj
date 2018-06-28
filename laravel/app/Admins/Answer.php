@@ -4,22 +4,16 @@ namespace App\Admins;
 
 use Illuminate\Database\Eloquent\Model;
 
-class UserInfo extends Model
+class Answer extends Model
 {
 
-    /**
-     * The table associated with the model.
-     *
-     * @var string
-     */
-    protected $table = 'user_info';
     /**
      * The attributes that are mass assignable.
      *
      * @var array
      */
     protected $fillable = [
-        'user_id', 'realname', 'sex','birthday','question_id','answer','address_province','address_city','address_region'
+        'user_id', 'question_id', 'answer'
     ];
 
     /**
@@ -28,11 +22,16 @@ class UserInfo extends Model
      * @var array
      */
     protected $hidden = [
-        
+
     ];
 
     public function user()
     {
-    	return $this->belongsto(User::class);
+        return $this->belongsTo(User::class);
+    }
+
+    public function question()
+    {
+        return $this->belongsTo(SecurityQuestion::class);
     }
 }
