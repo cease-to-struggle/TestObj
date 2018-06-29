@@ -6,6 +6,9 @@ use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use App\Admins\User;
 use App\Admins\SecurityQuestion;
+use Validator;
+use App\Services\RegisterService;
+
 
 class RegisterController extends Controller
 {
@@ -30,6 +33,38 @@ class RegisterController extends Controller
 
     public function postForm(Request $request)
     {
+        try{
+            $validator = Validator::make($request->all(),$this->getValidateRules());
+            if($validator->fails())
+            {
+                throw new \Exception(implode("\r\n",$validator->errors()->all()));
+            }
+           
+        }catch(\Exception $e){
+            throw new \Exception($e->getMessage());
+        }
 
+        $inputs = $request->all();
+
+        
+    }
+
+
+    public function getValidateRules()
+    {
+        return [
+              "user_loginName" => 'bail|required|alpha_num|max:30|min:6',
+              "user_loginPassword" => "required",
+              "user_loginPassword_1" => "required",
+              "user_name" => "required",
+              "user_sex" => "required",
+              "user_age" => "required",
+              "birthday" => "nullable",
+              "user_tel" => "nullable",
+              "user_address" => "nullable",
+              "user_eMail" => "required",
+              "question" => "required",
+              "answer" => "required",
+        ];
     }
 }

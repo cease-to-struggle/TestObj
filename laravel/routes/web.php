@@ -21,6 +21,8 @@ Route::group(['middleware'=>'web'],function(){
 
     Route::get('/register',['as'=>'register','uses'=>'Admins\RegisterController@showRegisterForm']);
     Route::post('/register/validateName','Admins\RegisterController@validateName');
+    Route::post('/postForm','Admins\RegisterController@postForm')->name('regForm');
+    //Route::get('/captcha','Admins\CaptchController@getCaptcha')->name('captcha');
     Route::group(['middleware'=>'auth:web'],function(){
         Route::get('/show','Admins\GeneralInfoController@index')->name('show');
         Route::get('/test','Admins\GeneralInfoController@dbTest');

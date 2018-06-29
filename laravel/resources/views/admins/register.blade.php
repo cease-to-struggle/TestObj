@@ -9,7 +9,7 @@
   </head>
 <body>
 <div id="main_layer" align="center">
- <form method="post" action="{{route('register')}}" id="form1">
+ <form method="post" action="{{route('regForm')}}" id="form1">
      <input id="token" type="hidden" name="_token" value="{{ csrf_token() }}">
      <!-- 头部图片开始--> 
    <div id="register_view_layer_17" ><img src="admins/images/logo_rg.gif" /></div>
@@ -85,33 +85,33 @@
        <!--邮箱 结束 -->
        <!--密保问题开始 -->
        <div id="register_view_layer_13" class="register_view_layer_1">
-           <div id="register_view_layer_13_1" class="register_view_layer_1_left">密保问题:<select  name="question1"   onBlur="verificationQuestion()"><option value="" selected>--请选择问题--</option>
+           <div id="register_view_layer_13_1" class="register_view_layer_1_left">密保问题:<select  name="question[]"   onBlur="verificationQuestion()"><option value="" selected>--请选择问题--</option>
                    @foreach($questions as $question)
                        <option value="{{$question->id}}" >{{$question->question}}</option>
                    @endforeach
                </select></div>
-           <div id="register_view_layer_13_3" class="register_view_layer_1_left">答&nbsp;&nbsp;&nbsp;&nbsp;案:<input type="text" name="answer1"   onBlur="verificationAnswer()"/></div>
+           <div id="register_view_layer_13_3" class="register_view_layer_1_left">答&nbsp;&nbsp;&nbsp;&nbsp;案:<input type="text" name="answer[]"   onBlur="verificationAnswer()"/></div>
            <div id="register_view_layer_13_2" class="verification" align="left"></div>
        </div>
        <div id="register_view_layer_13" class="register_view_layer_1">
-           <div id="register_view_layer_11_1" class="register_view_layer_1_left">密保问题:<select  name="question2"   onBlur="verificationQuestion()"><option value="" selected>--请选择问题--</option>    @foreach($questions as $question)
+           <div id="register_view_layer_11_1" class="register_view_layer_1_left">密保问题:<select  name="question[]"   onBlur="verificationQuestion()"><option value="" selected>--请选择问题--</option>    @foreach($questions as $question)
                        <option value="{{$question->id}}" >{{$question->question}}</option>
                    @endforeach</select></div>
-           <div id="register_view_layer_11_3" class="register_view_layer_1_left">答&nbsp;&nbsp;&nbsp;&nbsp;案:<input type="text" name="answer2"   onBlur="verificationAnswer()"/></div>
+           <div id="register_view_layer_11_3" class="register_view_layer_1_left">答&nbsp;&nbsp;&nbsp;&nbsp;案:<input type="text" name="answer[]"   onBlur="verificationAnswer()"/></div>
            <div id="register_view_layer_11_2" class="verification" align="left"></div>
        </div>
        <!--密保问题结束 -->
 
-       <!--"注册验证" 开始 -->
-       <div id="register_view_layer_19"><img src="admins/images/validate.jpg" /></div>
-       <!--"注册验证" 结束 -->
-       <!--验证码 开始-->
-       <div id="register_view_layer_15" >
-       <div id="register_view_layer_15_2"><img src="GetCode.asp" id="vimg" width="80px" height="15px" onClick="this.src='GetCode.asp'" /><a href="javascript:getVimg() ">看不清换一张！</a></div>
-       <div id="register_view_layer_15_1">输入你看到的字符:<input type="text" id="code" name="code" size="20"  /><span style="color:#FF0000"> *</span></div>      
-       </div>
-       <!--验证码 结束-->  
-       <!--”创建您的账号“ 开始 -->     
+<!--        "注册验证" 开始
+<div id="register_view_layer_19"><img src="admins/images/validate.jpg" /></div>
+"注册验证" 结束 -->
+  <!--      验证码 开始
+         <div id="register_view_layer_15" >
+         <div id="register_view_layer_15_2"><img src="{{captcha_src()}}" id="vimg" width="80px" height="15px" onClick="this.src='/captcha'+'/'+Math.random()" /><a href="javascript:getVimg()">看不清换一张！</a></div>
+         <div id="register_view_layer_15_1">输入你看到的字符:<input type="text" id="code" name="code" size="20"  /><span style="color:#FF0000"> *</span></div>      
+         </div>
+         验证码 结束  
+          -->       <!--”创建您的账号“ 开始 -->     
        <div id="register_view_layer_20"><img src="admins/images/create_account.jpg" /></div>
        <!--”创建您的账号“ 结束 -->
        <!-- 创建账号 开始-->  

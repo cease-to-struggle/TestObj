@@ -40,7 +40,7 @@ function verificationMimaQueren(){
 	
 }
  	function  verificationN(){
-		 var txt=document.getElementById("user_age").value;
+		 var txt=document.getElementById("userAge").value;
 	 if(txt=="" || txt==null){
 		 document.getElementById("register_view_layer_5_2").innerHTML="年龄不能为空！"; 
 	 }
@@ -90,17 +90,24 @@ function verificationYouxiang(){
 			}
                    
 }
+function verificationQuestion(){
+	document.getElementsByName()
+}
+
+function verificationAnswer(){
+
+}
 
 
 function getVimg()
 {
-  document.getElementById( "vimg" ).src = "GetCode.asp";
+  document.getElementById( "vimg" ).src = "/captcha"+'/'+Math.random();
 }
 
 function sumbit(){
-      if(verificationYonghuming() &&verificationN()&& verificationMima() && verificationMimaQueren() && verificationNianling() && verificationTel() && verificationYouxiang()  ){
+      
 		  document.getElementById("form1").submit();
-		  }
+		  
 	
 
 	}
@@ -112,4 +119,3 @@ function yonghumingOnFocus(){
 function mimaOnFocus(){
 		document.getElementById("register_view_layer_2_3").style.display="block";
 	}
-	
