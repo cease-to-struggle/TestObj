@@ -40,12 +40,17 @@ class RegisterController extends Controller
                 throw new \Exception(implode("\r\n",$validator->errors()->all()));
             }
            
-        }catch(\Exception $e){
-            throw new \Exception($e->getMessage());
-        }
 
         $inputs = $request->all();
 
+        $res = RegisterService::saveData($inputs);
+
+        
+          return $res['message'];
+       
+        }catch(\Exception $e){
+            throw new \Exception($e->getMessage());
+        }
         
     }
 

@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Auth;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Foundation\Auth\AuthenticatesUsers;
+use Validator;
 
 class LoginController extends Controller
 {
@@ -56,4 +57,19 @@ class LoginController extends Controller
     {
         return 'username';
     }
+
+
+   /* public function login(Request $request)
+    {
+        $validator = Validator::make($request->all(),[
+            'userName'=>'required',
+            'password'=>'required'
+            ],[
+            'userName.required'=>'用户名不能为空',
+            'password.required'=>'密码不能为空'
+            ]);
+        if($validator->fails()){
+            return json_encode(['errcode'=>'403','errmessage'=>$validator->errors()->first()]);
+        }
+    }*/
 }
