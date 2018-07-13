@@ -56,12 +56,12 @@ return [
     */
 
     'from' => [
-        'address' => env('MAIL_FROM_ADDRESS', 'hello@example.com'),
+        'address' => env('MAIL_FROM_ADDRESS', 'chaifenglei@163.com'),
         'name' => env('MAIL_FROM_NAME', 'Example'),
     ],
 
     'to'=>[
-        'address' => env('MAIL_TO_ADDRESS', 'hello@example.com'),
+        'address' => env('MAIL_TO_ADDRESS', 'chaifenglei@126.com'),
         'name' => env('MAIL_TO_NAME', 'Example'),
     ],
 
@@ -76,7 +76,7 @@ return [
     |
     */
 
-    'encryption' => env('MAIL_ENCRYPTION', 'tls'),
+    'encryption' => env('MAIL_ENCRYPTION', 'ssl'),
 
     /*
     |--------------------------------------------------------------------------

@@ -6,6 +6,12 @@ use Illuminate\Database\Eloquent\Model;
 
 class Answer extends Model
 {
+    /**
+     * The table associated with the Model
+     *
+     * @var array
+     */
+    protected $table='answers';
 
     /**
      * The attributes that are mass assignable.

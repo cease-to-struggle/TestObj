@@ -15,23 +15,12 @@ class GeneralInfoController extends Controller
 	//public $
 
     public function index()
-    {   //dd(Auth::user()->id);
-        $user = Auth::user()->info;
-        dd($user);
-        echo '<pre/>';
+    {  
+        $user =Auth::user();
         $userInfo = $user->info;
-        //var_dump($userInfo);
-        echo '<hr/>';
-        //$answers= $user->answer;
-        //$collection= collect($answers);
-     /*   $arr = $collection->map(function($item,$key){
-            return $collection[$key][]=[$item->question->question,$item->answer];
-
-        });*/
-        //dd($arr->all());
-
-       // var_dump($answer);die;
-        return view('admins.index',compact('user','userI'));
+       // $login_account = $user->
+        
+        return view('admins.index',compact('user','userInfo'));
     }
 
 

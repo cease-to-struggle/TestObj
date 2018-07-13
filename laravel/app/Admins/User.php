@@ -22,7 +22,7 @@ class User extends Authenticatable
      * @var array
      */
     protected $fillable = [
-        'username', 'email', 'telephone','password','login_amount','failed_amount','is_active'
+        'username', 'email','telephone','password','login_amount','failed_amount','is_active'
     ];
 
     /**
@@ -43,4 +43,10 @@ class User extends Authenticatable
     {
         return $this->hasMany(Answer::class,'user_id');
     }
+
+    public function role()
+    {
+        return $this->hasOne(UserRoles::class,'user_id');
+    }
+
 }

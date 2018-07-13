@@ -16,8 +16,9 @@ class CreateUserInfoTable extends Migration
         Schema::create('user_info',function(Blueprint $table){
             $table->increments('id');
             $table->integer('user_id')->unsigned();
-            $table->foreign('user_id')->references('id')->on('users')->onDelete('cascade')->onUpdate('cascade');
+           // $table->foreign('user_id')->references('id')->on('users')->onDelete('cascade')->onUpdate('cascade');
             $table->string('realname')->default('');
+            $table->string('petname')->default('')->index();
             $table->enum('sex',['0','1'])->default('0')->commit('0 代表女;1 代表男');
             $table->string('age')->default('');
             $table->string('birthday')->default('');

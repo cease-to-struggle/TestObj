@@ -4,22 +4,22 @@ namespace App\Admins;
 
 use Illuminate\Database\Eloquent\Model;
 
-class UserInfo extends Model
+class FriendGroups extends Model
 {
-
     /**
      * The table associated with the model.
      *
      * @var string
      */
-    protected $table = 'user_info';
+    protected $table = 'friend_groups';
+
     /**
      * The attributes that are mass assignable.
      *
      * @var array
      */
     protected $fillable = [
-        'user_id', 'realname','petName', 'sex','birthday','question_id','answer','address_province','address_city','address_region'
+        'user_id', 'group_name'
     ];
 
     /**
@@ -27,12 +27,6 @@ class UserInfo extends Model
      *
      * @var array
      */
-    protected $hidden = [
-        
-    ];
+    protected $hidden = [];
 
-    public function user()
-    {
-    	return $this->belongsto(User::class);
-    }
 }
