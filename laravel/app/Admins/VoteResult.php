@@ -4,14 +4,15 @@ namespace App\Admins;
 
 use Illuminate\Database\Eloquent\Model;
 
-class Answer extends Model
+class VoteResult extends Model
 {
+    //
     /**
-     * The table associated with the Model
+     * The table associated with the model.
      *
-     * @var array
+     * @var string
      */
-    protected $table='answers';
+    protected $table = 'vote_results';
 
     /**
      * The attributes that are mass assignable.
@@ -19,7 +20,7 @@ class Answer extends Model
      * @var array
      */
     protected $fillable = [
-        'user_id', 'question_id', 'answer'
+        'vote_id', 'option','vote_amount'
     ];
 
     /**
@@ -27,13 +28,5 @@ class Answer extends Model
      *
      * @var array
      */
-    protected $hidden = [
-
-    ];
-
-
-    public function question()
-    {
-        return $this->belongsTo(SecurityQuestion::class);
-    }
+    protected $hidden = [];
 }

@@ -15,6 +15,10 @@ class CreateVoteQuestionsTable extends Migration
     {
         Schema::create('vote_questions', function (Blueprint $table) {
             $table->increments('id');
+            $table->integer('user_id');
+            $table->string('title');
+            $table->string('question');
+            $table->softDeletes();
             $table->timestamps();
         });
     }

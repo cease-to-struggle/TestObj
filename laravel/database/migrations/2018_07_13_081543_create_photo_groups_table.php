@@ -15,6 +15,8 @@ class CreatePhotoGroupsTable extends Migration
     {
         Schema::create('photo_groups', function (Blueprint $table) {
             $table->increments('id');
+            $table->integer('user_id');
+            $table->string('group_name');
             $table->timestamps();
         });
     }

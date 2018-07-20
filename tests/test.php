@@ -40,7 +40,7 @@ function printElement(array $arr)
  printElement($arr);
 ;*/
 ////判断$Year和$Month是否为空,如果为空就获取系统当前日期,否则用$_GET获取
-$Year = empty($_GET['Year']) ? date("Y"): $_GET["Year"];
+/*$Year = empty($_GET['Year']) ? date("Y"): $_GET["Year"];
 $Month = empty($_GET['Month']) ? date("m"): $_GET["Month"];
 ////获取当前日期////
 $Today = date("Ymj");
@@ -125,7 +125,18 @@ echo "<tr>";
   }
  }
 echo "</tr>";
-}
-?>
+}*/
+/*require 'test/test1.php';
+echo __LINE__;*/
+/*$test = array('a'=>'aaa','b'=>'who','c'=>'are');
+$arr =var_export($test,true);
+
+echo $arr,'<br/>';
+var_dump(gettype($arr));*/
+$a1=array("a"=>"red","b"=>"green","c"=>"gray");
+$a2=array("a"=>"red","c"=>"yellow","d"=>"pink");
+
+$result=array_intersect_key($a1,$a2);
+print_r($result);
 
 

@@ -86,16 +86,16 @@
        <!--密保问题开始 -->
        <div id="register_view_layer_13" class="register_view_layer_1">
            <div id="register_view_layer_13_1" class="register_view_layer_1_left">密保问题:<select  name="question[]"   onBlur="verificationQuestion()"><option value="" selected>--请选择问题--</option>
-                   @foreach($questions as $question)
-                       <option value="{{$question->id}}" >{{$question->question}}</option>
+                   @foreach($questions as $k => $question)
+                       <option value="{{$k}}" >{{$question}}</option>
                    @endforeach
                </select></div>
            <div id="register_view_layer_13_3" class="register_view_layer_1_left">答&nbsp;&nbsp;&nbsp;&nbsp;案:<input type="text" name="answer[]"   onBlur="verificationAnswer()"/></div>
            <div id="register_view_layer_13_2" class="verification" align="left"></div>
        </div>
        <div id="register_view_layer_13" class="register_view_layer_1">
-           <div id="register_view_layer_11_1" class="register_view_layer_1_left">密保问题:<select  name="question[]"   onBlur="verificationQuestion()"><option value="" selected>--请选择问题--</option>    @foreach($questions as $question)
-                       <option value="{{$question->id}}" >{{$question->question}}</option>
+           <div id="register_view_layer_11_1" class="register_view_layer_1_left">密保问题:<select  name="question[]"   onBlur="verificationQuestion()"><option value="" selected>--请选择问题--</option>    @foreach($questions as $k=> $question)
+                       <option value="{{$k}}" >{{$question}}</option>
                    @endforeach</select></div>
            <div id="register_view_layer_11_3" class="register_view_layer_1_left">答&nbsp;&nbsp;&nbsp;&nbsp;案:<input type="text" name="answer[]"   onBlur="verificationAnswer()"/></div>
            <div id="register_view_layer_11_2" class="verification" align="left"></div>

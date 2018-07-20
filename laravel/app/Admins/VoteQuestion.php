@@ -4,14 +4,15 @@ namespace App\Admins;
 
 use Illuminate\Database\Eloquent\Model;
 
-class FriendGroups extends Model
+class VoteQuestion extends Model
 {
+    //
     /**
      * The table associated with the model.
      *
      * @var string
      */
-    protected $table = 'friend_groups';
+    protected $table = 'vote_questions';
 
     /**
      * The attributes that are mass assignable.
@@ -19,7 +20,7 @@ class FriendGroups extends Model
      * @var array
      */
     protected $fillable = [
-        'user_id', 'group_name'
+        'user_id','title', 'question'
     ];
 
     /**
@@ -29,4 +30,9 @@ class FriendGroups extends Model
      */
     protected $hidden = [];
 
+
+    public function result()
+    {
+        return $this->hasMany(VoteResult::class,'vote_id');
+    }
 }

@@ -4,7 +4,7 @@ namespace App\Admins;
 
 use Illuminate\Database\Eloquent\Model;
 
-class Permissions extends Model
+class Permission extends Model
 {
     /**
      * the table associated with the model

@@ -4,14 +4,14 @@ namespace App\Admins;
 
 use Illuminate\Database\Eloquent\Model;
 
-class Answer extends Model
+class FriendGroup extends Model
 {
     /**
-     * The table associated with the Model
+     * The table associated with the model.
      *
-     * @var array
+     * @var string
      */
-    protected $table='answers';
+    protected $table = 'friend_groups';
 
     /**
      * The attributes that are mass assignable.
@@ -19,7 +19,7 @@ class Answer extends Model
      * @var array
      */
     protected $fillable = [
-        'user_id', 'question_id', 'answer'
+         'user_id','group_name'
     ];
 
     /**
@@ -27,13 +27,6 @@ class Answer extends Model
      *
      * @var array
      */
-    protected $hidden = [
+    protected $hidden = [];
 
-    ];
-
-
-    public function question()
-    {
-        return $this->belongsTo(SecurityQuestion::class);
-    }
 }

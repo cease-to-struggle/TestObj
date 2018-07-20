@@ -20,8 +20,8 @@ class CreateUsersTable extends Migration
             $table->string('telephone')->unique()->index();
             $table->string('password')->index();
             $table->rememberToken()->default('');
-            $table->integer('login_amount')->unsign()->default(0);
-            $table->integer('failed_amount')->unsign()->default(0);
+            $table->integer('login_amount')->unsigned()->default(0);
+            $table->integer('failed_amount')->unsigned()->default(0);
             $table->enum('is_active',[0,1])->default('0');
             $table->timestamps();
         });

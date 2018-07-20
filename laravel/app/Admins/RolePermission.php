@@ -4,7 +4,7 @@ namespace App\Admins;
 
 use Illuminate\Database\Eloquent\Model;
 
-class RolePermissions extends Model
+class RolePermission extends Model
 {
     /**
      * the table associated with the model
@@ -29,11 +29,5 @@ class RolePermissions extends Model
      */
     protected $hidden=[];
 
-    /**
-     * @return \Illuminate\Database\Eloquent\Relations\BelongsTo
-     */
-    public function role()
-    {
-        return $this->belongsTo(Roles::class,'role_id');
-    }
+
 }

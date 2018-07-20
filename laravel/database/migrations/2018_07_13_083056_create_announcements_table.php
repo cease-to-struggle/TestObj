@@ -15,6 +15,10 @@ class CreateAnnouncementsTable extends Migration
     {
         Schema::create('announcements', function (Blueprint $table) {
             $table->increments('id');
+            $table->string('title');
+            $table->string('content');
+            $table->enum('is_release',['0','1']);
+            $table->softDeletes();
             $table->timestamps();
         });
     }

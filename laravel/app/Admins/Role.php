@@ -4,7 +4,7 @@ namespace App\Admins;
 
 use Illuminate\Database\Eloquent\Model;
 
-class Roles extends Model
+class Role extends Model
 {
 
     /**
@@ -29,6 +29,14 @@ class Roles extends Model
 
     public function userRole()
     {
-        return $this->hasMany(UserRoles::class,'role_id');
+        return $this->hasMany(UserRole::class,'role_id');
+    }
+
+    /**
+     * @return \Illuminate\Database\Eloquent\Relations\HasOne
+     */
+    public function rolePermission()
+    {
+        return $this->hasOne(RolePermission::class,'role_id');
     }
 }

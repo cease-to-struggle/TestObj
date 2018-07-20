@@ -15,7 +15,7 @@ class CreateFriendGroupsTable extends Migration
     {
         Schema::create('friend_groups', function (Blueprint $table) {
             $table->increments('id');
-            $table->integer('user_id')->unsign()->index();
+            $table->integer('user_id');
             $table->string('group_name');
             $table->timestamps();
         });

@@ -15,7 +15,7 @@ class RegisterController extends Controller
     //
     public function showRegisterForm()
     {
-        $questions = SecurityQuestion::get();
+        $questions = SecurityQuestion::pluck('question','id')->toArray();
         return view('admins.register',compact('questions'));
     }
 
@@ -42,6 +42,7 @@ class RegisterController extends Controller
            
 
         $inputs = $request->all();
+            dd($inputs);
 
         $res = RegisterService::saveData($inputs);
 
