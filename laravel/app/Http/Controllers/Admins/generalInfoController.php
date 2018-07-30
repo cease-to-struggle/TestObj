@@ -21,6 +21,7 @@ class GeneralInfoController extends Controller
        // $login_account = $user->
         
         return view('admins.index',compact('user','userInfo'));
+
     }
 
 

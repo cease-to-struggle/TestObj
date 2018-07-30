@@ -3,7 +3,7 @@
 echo '<pre/>';
 print_r($arr);
 var_dump($_SERVER);*/
-echo '<pre/>';
+//echo '<pre/>';
 /*if(!empty($_FILES['upfile'])){
 	print_r($_FILES);
 }*/
@@ -133,10 +133,24 @@ $arr =var_export($test,true);
 
 echo $arr,'<br/>';
 var_dump(gettype($arr));*/
-$a1=array("a"=>"red","b"=>"green","c"=>"gray");
+/*$a1=array("a"=>"red","b"=>"green","c"=>"gray");
 $a2=array("a"=>"red","c"=>"yellow","d"=>"pink");
 
 $result=array_intersect_key($a1,$a2);
-print_r($result);
+print_r($result);*/
 
-
+/*
+$img = imagecreatetruecolor(500, 500);
+$color = imagecolorallocate($img,255,0,0);
+//var_dump($color);
+imagefilledrectangle($img, 0, 0, 500, 500, $color);
+header('content-type:image/jpeg');
+imagejpeg($img);*/
+$arr = array('id'=>1,'name'=>'Li');
+$str = json_encode($arr);
+$str1 = json_encode($str);
+echo '<pre />';
+echo $str;
+echo $str1;
+print_r(json_decode($str));
+print_r(json_decode($str1));
