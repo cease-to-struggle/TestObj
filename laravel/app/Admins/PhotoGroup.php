@@ -4,6 +4,21 @@ namespace App\Admins;
 
 use Illuminate\Database\Eloquent\Model;
 
+/**
+ * App\Admins\PhotoGroup
+ *
+ * @property int $id
+ * @property int $user_id
+ * @property string $group_name
+ * @property \Carbon\Carbon|null $created_at
+ * @property \Carbon\Carbon|null $updated_at
+ * @method static \Illuminate\Database\Eloquent\Builder|\App\Admins\PhotoGroup whereCreatedAt($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|\App\Admins\PhotoGroup whereGroupName($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|\App\Admins\PhotoGroup whereId($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|\App\Admins\PhotoGroup whereUpdatedAt($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|\App\Admins\PhotoGroup whereUserId($value)
+ * @mixin \Eloquent
+ */
 class PhotoGroup extends Model
 {
     //

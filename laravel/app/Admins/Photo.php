@@ -4,6 +4,25 @@ namespace App\Admins;
 
 use Illuminate\Database\Eloquent\Model;
 
+/**
+ * App\Admins\Photo
+ *
+ * @property int $id
+ * @property int $photo_group_id
+ * @property string $s_path
+ * @property string $m_path
+ * @property string $l_path
+ * @property \Carbon\Carbon|null $created_at
+ * @property \Carbon\Carbon|null $updated_at
+ * @method static \Illuminate\Database\Eloquent\Builder|\App\Admins\Photo whereCreatedAt($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|\App\Admins\Photo whereId($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|\App\Admins\Photo whereLPath($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|\App\Admins\Photo whereMPath($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|\App\Admins\Photo wherePhotoGroupId($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|\App\Admins\Photo whereSPath($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|\App\Admins\Photo whereUpdatedAt($value)
+ * @mixin \Eloquent
+ */
 class Photo extends Model
 {
     //

@@ -4,7 +4,7 @@ $socket = socket_create(AF_INET, SOCK_STREAM, SOL_TCP);
 
  /****************设置socket连接选项，这两个步骤你可以省略*************/
      //接收套接流的最大超时时间1秒，后面是微秒单位超时时间，设置为零，表示不管它
-    socket_set_option($socket, SOL_SOCKET, SO_RCVTIMEO, array("sec" => 1, "usec" => 0));
+    socket_set_option($socket, SOL_SOCKET, SO_RCVTIMEO, array("sec" => 10, "usec" => 0));
      //发送套接流的最大超时时间为6秒
     socket_set_option($socket, SOL_SOCKET, SO_SNDTIMEO, array("sec" => 6, "usec" => 0));
     /****************设置socket连接选项，这两个步骤你可以省略*************/
@@ -14,7 +14,7 @@ $socket = socket_create(AF_INET, SOCK_STREAM, SOL_TCP);
        	# code...
           echo 'connect fail massege:'.socket_strerror(socket_last_error());
        } else{
-       	$message = 'I lobe you, socket !';
+       	$message = 'I love you, socket !';
        	 //转为GBK编码，处理乱码问题，这要看你的编码情况而定，每个人的编码都不同
         $message = mb_convert_encoding($message,'GBK','UTF-8');
         //向服务端写入字符串信息

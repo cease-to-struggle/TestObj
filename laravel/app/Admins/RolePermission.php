@@ -4,6 +4,11 @@ namespace App\Admins;
 
 use Illuminate\Database\Eloquent\Model;
 
+/**
+ * App\Admins\RolePermission
+ *
+ * @mixin \Eloquent
+ */
 class RolePermission extends Model
 {
     /**

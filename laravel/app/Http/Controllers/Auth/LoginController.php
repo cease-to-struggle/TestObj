@@ -67,7 +67,7 @@ class LoginController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\RedirectResponse|\Illuminate\Http\Response
      */
-/*    public function login(Request $request)
+/*  public function login(Request $request)
     {
         $user = Auth::user();
         if($user->failed_account < 3) {
@@ -99,6 +99,11 @@ class LoginController extends Controller
 
         return $this->sendFailedLoginResponse($request);
     }*/
+
+    public function redirectTo(){
+
+        return '/show';
+    }
 
 
 }

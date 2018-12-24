@@ -4,6 +4,22 @@ namespace App\Admins;
 
 use Illuminate\Database\Eloquent\Model;
 
+/**
+ * App\Admins\ArticleCategory
+ *
+ * @property int $id
+ * @property int $user_id
+ * @property string $category_name
+ * @property \Carbon\Carbon|null $created_at
+ * @property \Carbon\Carbon|null $updated_at
+ * @property-read \Illuminate\Database\Eloquent\Collection|\App\Admins\Article[] $article
+ * @method static \Illuminate\Database\Eloquent\Builder|\App\Admins\ArticleCategory whereCategoryName($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|\App\Admins\ArticleCategory whereCreatedAt($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|\App\Admins\ArticleCategory whereId($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|\App\Admins\ArticleCategory whereUpdatedAt($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|\App\Admins\ArticleCategory whereUserId($value)
+ * @mixin \Eloquent
+ */
 class ArticleCategory extends Model
 {
     //

@@ -14,7 +14,8 @@
 $app = new Illuminate\Foundation\Application(
     realpath(__DIR__.'/../')
 );
-
+//echo '<pre />';
+//var_dump($app);die;
 /*
 |--------------------------------------------------------------------------
 | Bind Important Interfaces

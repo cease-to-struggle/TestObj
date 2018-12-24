@@ -45,7 +45,9 @@ $Month = empty($_GET['Month']) ? date("m"): $_GET["Month"];
 ////获取当前日期////
 $Today = date("Ymj");
 ////初始化日期数组////
-$Maxday = array("1","2","3","4","5","6","7","8","9","10","11","12","13","14","15","16","17","18","19","20",
+$Maxday = array("1",
+"2",
+"3","4","5","6","7","8","9","10","11","12","13","14","15","16","17","18","19","20",
 "21","22","23","24","25","26","27","28","29","30","31");
 $Maxday_count = count($Maxday);
 ////初始化星期数组////
@@ -146,11 +148,86 @@ $color = imagecolorallocate($img,255,0,0);
 imagefilledrectangle($img, 0, 0, 500, 500, $color);
 header('content-type:image/jpeg');
 imagejpeg($img);*/
-$arr = array('id'=>1,'name'=>'Li');
+/*$arr = array('id'=>1,'name'=>'Li');
 $str = json_encode($arr);
 $str1 = json_encode($str);
 echo '<pre />';
 echo $str;
 echo $str1;
 print_r(json_decode($str));
-print_r(json_decode($str1));
+print_r(json_decode($str1));*/
+/*$str = 'hello你好世界';
+echo  strlen($str);*/
+/*echo microtime(FALSE),"\n";
+echo microtime(TRUE);*/
+
+
+SZT00066222   2
+SZT00066230   2
+SZT00154685   2
+SZT00154728   2
+SZT00154729   2
+SZT00154730   2
+SZT00154731   2
+SZT00154732   2
+SZT00154733   2
+SZT00154734   2
+SZT00154735   2
+SZT00154736   2
+SZT00154737   2
+SZT00154738   2
+SZT00154739   2
+SZT00154740   2
+SZT00154741   2
+SZT00154742   2
+SZT00154744   2
+SZT00154745   2
+SZT00154746   2
+SZT00154747   2
+SZT00154748   2
+SZT00154749   2
+SZT00154750   2
+SZT00154776   2
+SZT00154777   2
+SZT00154778   2
+SZT00154779   2
+SZT00154780   2
+SZT00154781   2
+SZT00154782   2
+SZT00154783   2
+SZT00154784   2
+SZT00154785   2
+SZT00154786   2
+SZT00154787   2
+SZT00154788   2
+SZT00154789   2
+SZT00154790   2
+SZT00154791   2
+SZT00154792   2
+SZT00154793   2
+SZT00154751   2
+SZT00154752   2
+SZT00154753   2
+SZT00154754   2
+SZT00154755   2
+SZT00154756   2
+SZT00154757   2
+SZT00154758   2
+SZT00154759   2
+SZT00154760   2
+SZT00154761   2
+SZT00154762   2
+SZT00154763   2
+SZT00154764   2
+SZT00154765   2
+SZT00154766   2
+SZT00154767   2
+SZT00154768   2
+SZT00154769   2
+SZT00154770   2
+SZT00154771   2
+SZT00154772   2
+SZT00154773   2
+SZT00154774   2
+SZT00154775   2
+

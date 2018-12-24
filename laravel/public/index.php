@@ -34,7 +34,7 @@ require __DIR__.'/../bootstrap/autoload.php';
 */
 
 $app = require_once __DIR__.'/../bootstrap/app.php';
-
+//var_dump(LARAVEL_START);die;
 /*
 |--------------------------------------------------------------------------
 | Run The Application

@@ -4,6 +4,15 @@ namespace App\Admins;
 
 use Illuminate\Database\Eloquent\Model;
 
+/**
+ * App\Admins\SecurityQuestion
+ *
+ * @property int $id
+ * @property string $question
+ * @method static \Illuminate\Database\Eloquent\Builder|\App\Admins\SecurityQuestion whereId($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|\App\Admins\SecurityQuestion whereQuestion($value)
+ * @mixin \Eloquent
+ */
 class SecurityQuestion extends Model
 {
     //
