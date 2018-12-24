@@ -16,8 +16,9 @@ class FreshCommand extends Command
      */
     protected $signature = 'migrate:fresh {--database= : The database connection to use.}
                 {--force : Force the operation to run when in production.}
-                {--path= : The path of migrations files to be executed.}
-                {--seed : Indicates if the seed task should be re-run.}';
+                {--path : The path of migrations files to be executed.}
+                {--seed : Indicates if the seed task should be re-run.}
+                {--test : The operation for testing }';
 
     /**
      * The console command description.
