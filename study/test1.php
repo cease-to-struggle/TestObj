@@ -41,10 +41,3 @@ $arr = json_decode($str,true);
 
 //var_dump($arr);die;
 $num=5507000160;
-$result = [];
-for($i=0;$i<100;$i++){
-	$num++;
-	$arr["referenceNumber"] ="TTI"."$num";
-	$result[]=$arr;	
-}
-echo json_encode($result);
