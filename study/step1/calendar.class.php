@@ -86,7 +86,18 @@ echo "<tr>";
  }
 echo "</tr>";
 }
-class Calendar
-{
 
-}
+// select data_received->"$.req.status.con_no" from status_updates where data_received->"$.req.status.status_code" = "010" and date(created_at)>'2019-01-16' and lastmile_provider_id = 5 group by data_received->"$.req.status.con_no"
+
+// SELECT * FROM `orders` where status in ('pending','delivering',"reject","return","receive","return_inbound_scan","return_outbound_scan") AND date(created_at)>='2019-01-16' AND is_not_deleted = 1 and lastmile_provider_id = 5 
+
+// SELECT * FROM `orders` where delivering_at is null AND is_not_deleted = 1 AND lastmile_provider_id = 5 AND api_lastmile_push_at is not null AND date(created_at)>'2019-01-16' and date(upload_at)-0 < date(now())-7
+
+
+// update projects set th_cs_info = 'SHOPPING GUARANTEE
+// - สามารถคืนเงินได้ภายใน 7 วันทำการ
+// - รับประกันการโอนเงินค่าสินค้าคืน
+// - สายด่วนบริการลูกค้า 
+
+// บริการลูกค้าสัมพันธ์: 020263868' where client_id in (16,95,96,97,123,126)
+
