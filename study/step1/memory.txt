@@ -1,0 +1,27 @@
+一些程序操作的内存原理：
+
+为了明晰变量声明及调用：
+***************************************************************************************
+程序内存划分为：栈区、数据段、堆区、代码段、输出缓存。其中数据段又分为全局区和静态区
+栈区：保存变量名
+数据段：保存简单数据，其中静态区用于保存常量、全局区用于保存简单的非常量值
+堆区： 用于保存复杂的数据  数组 对象 字符串等
+代码段： 存储代码对应的机器指令
+输出缓存： 脚本运行过程中的输出都会先存放在输出缓存，当脚本运行结束后，再将缓存中的数据返回给服务器，服务器将数据发送给浏览器
+
+内存中数据存储都有对应的地址标识 即变量名引用对应的地址标识
+传值赋值：另开内存区域 存储相同数值 使用对应变量名引用新的内存地址标识
+引用赋值：只是引用已有数据的内存地址
+
+
+***************************************************************************************
+***************************************************************************************
+{
+    "Partner": 0,
+    "UserName": "test123@mail.com",
+    "UserId": 1815327,
+    "Role": 6,
+    "FromSource": "CUSTOMER",
+    "TokenKey": "eyJhbGciOiJFUzI1NiJ9.eyJzdWIiOiI2MDk4MDAwIiwiVXNlcklkIjoxODE1MzI3LCJGcm9tU291cmNlIjowLCJUb2tlbiI6IkM4NTNGMkI2QzgzNkI2QTIyNEEyOTZBRTAxNzhGNkNGIiwiZXhwIjoxNTM3OTU1ODYyLCJQYXJ0bmVyIjowfQ.IWdrwsnmRPEl_pmCtDRZgJ6vBPFfhba37bVysvIZ8cA7LLd38McIRYGCbNgo3s1-uVkssvhxe7tBgid8X-fN0w",
+    "Phone": "6098000"
+}
