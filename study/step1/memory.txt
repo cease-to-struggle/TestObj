@@ -2,7 +2,8 @@
 
 为了明晰变量声明及调用：
 ***************************************************************************************
-程序内存划分为：栈区、数据段、堆区、代码段、输出缓存。其中数据段又分为全局区和静态区
+程序内存划分为：栈区、数据段、堆区、代码段、输出缓存。
+其中【（【数据段】）】又分为全局区和静态区
 栈区：保存变量名
 数据段：保存简单数据，其中静态区用于保存常量、全局区用于保存简单的非常量值
 堆区： 用于保存复杂的数据  数组 对象 字符串等
@@ -16,12 +17,3 @@
 
 ***************************************************************************************
 ***************************************************************************************
-{
-    "Partner": 0,
-    "UserName": "test123@mail.com",
-    "UserId": 1815327,
-    "Role": 6,
-    "FromSource": "CUSTOMER",
-    "TokenKey": "eyJhbGciOiJFUzI1NiJ9.eyJzdWIiOiI2MDk4MDAwIiwiVXNlcklkIjoxODE1MzI3LCJGcm9tU291cmNlIjowLCJUb2tlbiI6IkM4NTNGMkI2QzgzNkI2QTIyNEEyOTZBRTAxNzhGNkNGIiwiZXhwIjoxNTM3OTU1ODYyLCJQYXJ0bmVyIjowfQ.IWdrwsnmRPEl_pmCtDRZgJ6vBPFfhba37bVysvIZ8cA7LLd38McIRYGCbNgo3s1-uVkssvhxe7tBgid8X-fN0w",
-    "Phone": "6098000"
-}
