@@ -130,20 +130,21 @@ DOM对象不能直接使用jQuery 方法  可以使用万能方法$(DOM对象) �
 类属性操作
 	.removeClass(类名)
 	.hasClass()
-	.addClass()
+	.addClass()  //添加外部样式或者内部样式  优先级小于.css()的内联(行内)样式
 	.toggleClass() 切换类样式
 
 内部插入节点
 	A.append(B)  <=> B.appendTo(A)   把B追加到A内部
-	A.prepend(B) <=> B.prependTo(B)  把B插入到A头部
+	A.prepend(B) <=> B.prependTo(A)  把B插入到A内部作为第一个元素
 
 外部插入节点
 	A.before(B) <=> B.insertBefore(A)  把B插入到A元素之前
 	A.after(B) <=> B.insertAfter(A)   把B插入到A元素之后
 
 删除元素
-	A.remove()
-	A.empty()
+	A.remove()  //包括自身的彻底移除，包括绑定事件和数据
+	A.empty()  //只是清空元素内部,自身保留,绑定事件保留，可能引起内存问题，谨慎使用
+	A.detach()  //移除对象 只是显示效果没了，但内存中仍然存在，可用append()加回
 
 克隆节点
 	A.clone()  返回当前对象的副本   默认不复制事件

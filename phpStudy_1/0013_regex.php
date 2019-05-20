@@ -14,7 +14,8 @@ str.split(reg);  根据字串把字符串拆分成数组
 
 匹配模式  修正符
 g:global  全局匹配  在字符的所有位置尝试匹配
-		用法：reg.exec()  str.match()  str.replace() 表达式不加入g，则只处理第一个匹配；如果加入g，处理所有。另外三个方法不受g修正符影响
+		用法：reg.exec()  str.match()  str.replace() 表达式不加入g，则只处理第一个匹配；如果加入g，处理所有。
+		另外三个方法不受g修正符影响
 
 i:ignore  忽略大小写
 		
