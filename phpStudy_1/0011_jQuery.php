@@ -1,4 +1,4 @@
-页面载入事件：完成html元素，外部资源文件加载完成
+
 	window.onload
 页面就绪事件： 完成html元素触发
 	$(document).ready(function(){
@@ -76,11 +76,13 @@ $('selector1,selector2,selector3')  选择器间用逗号隔开
 	A.not()
 	A.next()
 	A.prev()
-	A.siblings() 兄弟   $('A~B')弟选择器
+	A.siblings() 兄弟(不包括自身)   $('A~B')弟选择器  
 	A.parent()
 	A.parents()
 	A.children()
 	A.find()  //匹配A的某个后代元素
+	.first()
+	.last()
 
 
 jQuery 对象  可以通过索引获取DOM对象
@@ -147,8 +149,8 @@ DOM对象不能直接使用jQuery 方法  可以使用万能方法$(DOM对象) �
 	A.detach()  //移除对象 只是显示效果没了，但内存中仍然存在，可用append()加回
 
 克隆节点
-	A.clone()  返回当前对象的副本   默认不复制事件
-	A.clone(true)   复制节点且复制事件  js原生绑定事件不会被复制
+	A.clone()  返回当前对象的副本   默认不复制jQuery事件数据
+	A.clone(true)   复制节点且复制jQuery事件数据  js原生绑定的事件不会被复制
 
 替换节点
 	A.replaceAll(B)

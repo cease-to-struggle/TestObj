@@ -1,22 +1,3 @@
-      {{trans('backend.inbound_dashboard.inbound')}}
-      {{trans('backend.inbound_dashboard.inboundNormal')}}
-      {{trans('backend.inbound_dashboard.inboundPending')}}
-      {{trans('backend.inbound_dashboard.inboundPendingTotal')}}
-      {{trans('backend.inbound_dashboard.inboundPendingUFO')}}
-      {{trans('backend.inbound_dashboard.inboundPendingUnregister')}}
-      {{trans('backend.inbound_dashboard.inboundPendingHold')}}
-      {{trans('backend.inbound_dashboard.inboundPendingOverprice')}}
-      {{trans('backend.inbound_dashboard.inboundPendingOversize')}}
-      {{trans('backend.inbound_dashboard.outboundableTotal')}}
-      {{trans('backend.inbound_dashboard.outboundHK')}}
-      {{trans('backend.inbound_dashboard.outboundPendingHK')}}
-      {{trans('backend.inbound_dashboard.inboundableCNTotal')}}
-      {{trans('backend.inbound_dashboard.inboundCN')}}
-      {{trans('backend.inbound_dashboard.inTransitHKCN')}}
-      {{trans('backend.inbound_dashboard.inboundCNTotal')}}
-      {{trans('backend.inbound_dashboard.handoverCN')}}
-      {{trans('backend.inbound_dashboard.pendingHandoverCN')}}
-      {{trans('backend.inbound_dashboard.handoverCNTotal')}}
-      {{trans('backend.inbound_dashboard.pendingDeliveryCN')}}
-      {{trans('backend.inbound_dashboard.successDeliveryCN')}}
-      {{trans('backend.inbound_dashboard.failedDeliveryCN')}}
+<?php 
+$path = '/times/ti/abc/xyz.txt';
+echo basename($path);
